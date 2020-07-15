@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url('https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2') format('woff2');
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+.label-text {
+  display: block;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+textarea {
+  font-family: monospace;
+  margin-top: 10px;
+  min-height: 300px;
+  padding: 10px;
+  width: 100%;
+}
+
+pre {
+  border: 1px #666 solid;
+  margin-top: 10px;
+  padding: 10px;
+  min-height: 300px;
+  width: 100%;
+}
+
+.transcript {
+  margin-top: 10px;
+}

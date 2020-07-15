@@ -1,17 +1,3 @@
-# Cumbion
-
-Dynamically typed Turing-complete programming language that's also cumbia lyrics.
-
-Live javascript JavaScript parser and interpreter: https://patopitaluga.github.io/cumbion/
-
-## 'Hello, World' in Cumbion
-```
-¡Y dice! "Hello World"
-```
-
-FizzBuzz in Cumbion
-
-```
 Yo tomo Licor
 Yo tomo Cerveza
 Mientras el Licor es tan alto como la Cerveza
@@ -39,6 +25,3 @@ Y dice! "Buzz!"
 Wuki Wuki!
 
 Y dice! Cuca
-```
-
-Inspired by: https://codewithrockstar.com/
