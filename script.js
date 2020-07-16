@@ -33,6 +33,26 @@ const output = (_str) => {
   document.getElementById('output').innerHTML += _str;
 };
 
+document.getElementById('example-findmax').onclick = () => {
+  document.getElementById('cumbioncode').innerHTML = `Las Pibas quieren cha cha
+Las Pibas tienen ganas de bailar
+Las Pibas tienen raka taka pum pum
+Las Pibas quieren rochas
+Las Pibas quieren chetas
+Las Pibas tienen 100
+
+La Cumbia no es nada
+El Mayor no es nada
+Mientras la Cumbia sea menor que las Pibas
+Sube la Cumbia!
+si la Cumbia de las Pibas es más grande que el Mayor
+el Mayor es la Cumbia de las Pibas
+
+
+Y dice! Mayor!
+`;
+};
+
 document.getElementById('run-button').onclick = () => {
   /* try {
     eval(String(document.getElementById('result').innerHTML));
@@ -42,14 +62,14 @@ document.getElementById('run-button').onclick = () => {
     err.lineNumber = e.lineNumber - err.lineNumber + 3;
     throw err;
   }*/
-  const scriptElement = document.createElement('script');
   document.getElementById('output').innerHTML = '';
-  let theScriptStr = `const output = (_str) => {
-    document.getElementById('output').innerHTML += _str + '\\n';
-  };
-`
+  let theScriptStr = '';
   theScriptStr += decodeEntities(document.getElementById('result').innerHTML);
   theScriptStr = theScriptStr.replace(RegExp('console.log', 'g'), 'output');
-  scriptElement.innerHTML = theScriptStr;
-  document.getElementsByTagName('body')[0].appendChild(scriptElement)
+
+  eval(theScriptStr);
+
+  // const scriptElement = document.createElement('script');
+  // scriptElement.innerHTML = theScriptStr;
+  // document.getElementsByTagName('body')[0].appendChild(scriptElement)
 }

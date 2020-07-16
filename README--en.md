@@ -2,8 +2,6 @@
 
 Dynamically typed Turing-complete programming language that's also cumbia lyrics.
 
-------
-
 *Read this in other languages: [Español](README.md).*
 
 ------
