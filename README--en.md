@@ -1,19 +1,29 @@
 # Cumbion
 
-Español: https://github.com/patopitaluga/cumbion
-
 Dynamically typed Turing-complete programming language that's also cumbia lyrics.
+
+------
+
+*Read this in other languages: [Español](README.md).*
+
+------
 
 Live javascript JavaScript parser and interpreter: https://patopitaluga.github.io/cumbion/
 
+------
+
 Documentation: https://github.com/patopitaluga/cumbion/blob/master/DOCUMENTATION--en.md
 
-## 'Hello, World' in Cumbion
+------
+
+## Examples
+
+### 'Hello, World' in Cumbion
 ```
 ¡Y dice! "Hello World"
 ```
 
-FizzBuzz in Cumbion
+### FizzBuzz in Cumbion
 
 ```
 Yo tomo Licor
