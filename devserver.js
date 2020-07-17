@@ -19,9 +19,13 @@ require('http').createServer((req, res) => {
       res.setHeader('Content-Type', 'text/javascript');
       res.end(require('fs').readFileSync(require('path').resolve(__dirname, './lib/cumbion-to-js__helpers.mjs'), 'utf8'));
       break;
-    case '/lib/cumbion-to-js__handle-first-word__uppercase.mjs':
+    case '/lib/cumbion-to-js__handle-line-beginning.mjs':
       res.setHeader('Content-Type', 'text/javascript');
-      res.end(require('fs').readFileSync(require('path').resolve(__dirname, './lib/cumbion-to-js__handle-first-word__uppercase.mjs'), 'utf8'));
+      res.end(require('fs').readFileSync(require('path').resolve(__dirname, './lib/cumbion-to-js__handle-line-beginning.mjs'), 'utf8'));
+      break;
+    case '/lib/cumbion-to-js__is-variable.mjs':
+      res.setHeader('Content-Type', 'text/javascript');
+      res.end(require('fs').readFileSync(require('path').resolve(__dirname, './lib/cumbion-to-js__is-variable.mjs'), 'utf8'));
       break;
     default:
       res.end('');

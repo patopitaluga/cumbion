@@ -6,11 +6,11 @@ Lenguaje de programación de de tipado dinámico, Turing-completo, que es al mis
 
 ------
 
-Probá el intérprete de javascript en: https://patopitaluga.github.io/cumbion/
+**Probá el intérprete de javascript en: https://patopitaluga.github.io/cumbion/ **
 
 ------
 
-Documentación completa: https://github.com/patopitaluga/cumbion/blob/master/DOCUMENTATION.md
+[Documentación completa](https://github.com/patopitaluga/cumbion/blob/master/DOCUMENTATION.md)
 
 ------
 
@@ -21,36 +21,52 @@ Documentación completa: https://github.com/patopitaluga/cumbion/blob/master/DOC
 ¡Y dice! "Hola mundo"
 ```
 
+<details>
+<summary>Transcripción a javascript</summary>
+<pre>
+console.log('Hola mundo');
+</pre>
+</details>
+
 ### FizzBuzz en Cumbion
 
 ```
-Yo tomo Licor
-Yo tomo Cerveza
-Mientras el Licor sea tan alto como la Cerveza
-Poné Licor menos Cerveza en el Licor
+Yo tomo licor
+Yo tomo cerveza
+Mientras el licor sea tan alto como la cerveza
+El licor es el licor menos cerveza
 
-Mandale Licor
+¡Mandale licor!
 
-El Límite es 100
-Cuca es 0
-Laura es 3
-El Tano es 5
+El límite es 100
+La cumbia no es nada
+El Tano es tres
+Laura es la más linda
 
-Mientras que Cuca no sea el Límite
-Sube Cuca
-Si Yo con Cuca y Laura somos 0 y Yo con Cuca y El Tano somos 0
+Mientras que la cumbia no sea el límite
+Sube la cumbia
+Si yo con la cumbia y El Tano somos 0 y yo con la cumbia y Laura somos 0
 Y dice! "FizzBuzz!"
 Wuki Wuki!
 
-Si Yo con Cuca y Laura somos 0
+Si yo con la cumbia y El Tano somos 0
 Y dice! "Fizz!"
 Wuki Wuki!
 
-Si Yo con Cuca y El Tano somos 0
+Si yo con la cumbia y Laura somos 0
 Y dice! "Buzz!"
 Wuki Wuki!
 
-Y dice! Cuca
+Y dice! la cumbia
 ```
+
+<details>
+<summary>Transcripción a javascript</summary>
+<pre>
+console.log('Hola mundo');
+</pre>
+</details>
+
+------
 
 Inspired by: https://codewithrockstar.com/

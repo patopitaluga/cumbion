@@ -34,19 +34,19 @@ const output = (_str) => {
 };
 
 document.getElementById('example-findmax').onclick = () => {
-  document.getElementById('cumbioncode').innerHTML = `Las Pibas quieren cha cha
-Las Pibas tienen ganas de bailar
-Las Pibas tienen raka taka pum pum
-Las Pibas quieren rochas
-Las Pibas quieren chetas
-Las Pibas tienen 100
+  document.getElementById('cumbioncode').innerHTML = `Las pibas quieren cha cha
+Las pibas tienen ganas de bailar
+Las pibas tienen raka taka pum pum
+Las pibas quieren rochas
+Las pibas quieren chetas
+Las pibas tienen 100
 
-La Cumbia no es nada
-El Mayor no es nada
-Mientras la Cumbia sea menor que las Pibas
-Sube la Cumbia!
-si la Cumbia de las Pibas es más grande que el Mayor
-el Mayor es la Cumbia de las Pibas
+La cumbia no es nada
+El mayor no es nada
+Mientras la cumbia sea menor que las pibas
+Crece la cumbia!
+Si la cumbia de las pibas es más grande que el mayor
+El mayor es la cumbia de las pibas
 
 
 Y dice! Mayor!

@@ -73,9 +73,14 @@ cumbionToJs(fileContents)
         }
       });*/
     } else {
-      console.log('');
-      console.log(_result);
-      console.log('');
+      if (process.argv[3]) {
+        if (process.argv[3].slice(-3) !== '.js') throw new Error(process.argv[3] + ' is not a proper output js file. Try "node cumbion yourscript.cumbia someoutputname.js"');
+        fs.writeFileSync(process.argv[3], _result);
+        console.log('Output js file generated: ' + process.argv[3])
+      } else {
+        console.log('');
+        console.log(_result);
+      }
     }
   })
   .catch((_err) => {
