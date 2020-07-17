@@ -6,7 +6,7 @@ Dynamically typed Turing-complete programming language that's also cumbia lyrics
 
 ------
 
-**Live javascript JavaScript parser and interpreter: https://patopitaluga.github.io/cumbion/ **
+**Check the javascript interpreter [live](https://patopitaluga.github.io/cumbion/)**
 
 ------
 
@@ -52,6 +52,39 @@ Wuki Wuki!
 
 Y dice! la cumbia
 ```
+
+<details>
+<summary>Javascript transpilation</summary>
+<pre>
+let yo = function(licor, cerveza) {
+  while(licor >= cerveza) {
+    licor = licor - cerveza
+  }
+  return licor
+}
+let limite = 100
+let cumbia = 0
+let tano = 3
+let laura = 5
+
+while(cumbia != limite) {
+  cumbia++
+  if (yo(cumbia, tano) == 0 && yo(cumbia, laura) == 0) {
+    console.log("FizzBuzz!")
+    continue
+  }
+  if (yo(cumbia, tano) == 0) {
+    console.log("Fizz!")
+    continue
+  }
+  if (yo(cumbia, laura) == 0) {
+    console.log("Buzz!")
+    continue
+  }
+  console.log(cumbia)
+}
+</pre>
+</details>
 
 ------
 

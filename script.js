@@ -1,9 +1,10 @@
 import { cumbionToJs } from './lib/cumbion-to-js.mjs';
 
-document.getElementById('transcript-button').onclick = () => {
+document.getElementById('transpile-button').onclick = () => {
+  document.getElementById('output-title').innerHTML = 'Javascript transpilation:';
   cumbionToJs(document.getElementById('cumbioncode').value)
     .then((_result) => {
-      document.getElementById('result').innerHTML = _result;
+      document.getElementById('output').innerHTML = _result;
     })
     .catch((_err) => {
       console.log(_err);
@@ -30,41 +31,75 @@ const decodeEntities = (() => {
 })();
 
 const output = (_str) => {
-  document.getElementById('output').innerHTML += _str;
+  document.getElementById('output').innerHTML += _str + '\n';
 };
 
-document.getElementById('example-findmax').onclick = () => {
-  document.getElementById('cumbioncode').innerHTML = `Las pibas quieren cha cha
+document.getElementById('examples').onchange = (_ev) => {
+  if (Number(document.getElementById('examples').value) === 1)
+    document.getElementById('cumbioncode').innerHTML = `Yo tomo licor
+Yo tomo cerveza
+Mientras el licor sea tan alto como la cerveza
+El licor es el licor menos cerveza
+
+¡Mandale licor!
+
+El límite es 100
+La cumbia no es nada
+El Tano es tres
+Laura es la más linda
+
+Mientras que la cumbia no sea el límite
+Sube la cumbia
+Si yo con la cumbia y El Tano somos 0 y yo con la cumbia y Laura somos 0
+Y dice! "FizzBuzz!"
+Wuki Wuki!
+
+Si yo con la cumbia y El Tano somos 0
+Y dice! "Fizz!"
+Wuki Wuki!
+
+Si yo con la cumbia y Laura somos 0
+Y dice! "Buzz!"
+Wuki Wuki!
+
+Y dice! la cumbia
+`
+  if (Number(document.getElementById('examples').value) === 2)
+    document.getElementById('cumbioncode').innerHTML = `Las pibas tienen cha cha
 Las pibas tienen ganas de bailar
 Las pibas tienen raka taka pum pum
-Las pibas quieren rochas
-Las pibas quieren chetas
+La tres de las pibas es rocha
+La 4 de las pibas es re cheta
 Las pibas tienen 100
 
 La cumbia no es nada
 El mayor no es nada
 Mientras la cumbia sea menor que las pibas
-Crece la cumbia!
 Si la cumbia de las pibas es más grande que el mayor
 El mayor es la cumbia de las pibas
+Pará!
+Crece la cumbia!
 
-
+Y dice! "El más grande de:"
+Y dice! Las pibas!
+Y dice! "Es: "
 Y dice! Mayor!
 `;
 };
 
 document.getElementById('run-button').onclick = () => {
   /* try {
-    eval(String(document.getElementById('result').innerHTML));
+    eval(String(document.getElementById('output').innerHTML));
   } catch(e) {
     var err = e.constructor('Error in Evaled Script: ' + e.message);
     // +3 because `err` has the line number of the `eval` line plus two.
     err.lineNumber = e.lineNumber - err.lineNumber + 3;
     throw err;
   }*/
+
+  document.getElementById('output-title').innerHTML = 'Output:';
+  let theScriptStr = decodeEntities(document.getElementById('output').innerHTML);
   document.getElementById('output').innerHTML = '';
-  let theScriptStr = '';
-  theScriptStr += decodeEntities(document.getElementById('result').innerHTML);
   theScriptStr = theScriptStr.replace(RegExp('console.log', 'g'), 'output');
 
   eval(theScriptStr);

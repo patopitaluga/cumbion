@@ -4,9 +4,10 @@ const { resolve } = require('path');
 
 // Say our original entrance script is `app.js`
 
-let param2 = '';
-let param3 = '';
-if (process.argv[2]) param2 = ' ' + process.argv[2];
-if (process.argv[3]) param3 = ' ' + process.argv[3];
-const cmd = 'node --experimental-modules --no-warnings ' + resolve(__dirname, 'cumbion-cli.mjs' + param2 + param3);
+let arguments = '';
+for (let i = 2; i < process.argv.length; i++) {
+  arguments += ' ' + process.argv[i];
+}
+
+const cmd = 'node --experimental-modules --no-warnings ' + resolve(__dirname, 'cumbion-cli.mjs' + arguments);
 spawnSync(cmd, { stdio: 'inherit', shell: true });

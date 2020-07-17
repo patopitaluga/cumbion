@@ -27,6 +27,14 @@ require('http').createServer((req, res) => {
       res.setHeader('Content-Type', 'text/javascript');
       res.end(require('fs').readFileSync(require('path').resolve(__dirname, './lib/cumbion-to-js__is-variable.mjs'), 'utf8'));
       break;
+    case '/lib/cumbion-to-js__reserved-words.mjs':
+      res.setHeader('Content-Type', 'text/javascript');
+      res.end(require('fs').readFileSync(require('path').resolve(__dirname, './lib/cumbion-to-js__reserved-words.mjs'), 'utf8'));
+      break;
+    case '/lib/cumbion-to-js__handle-numbers.mjs':
+      res.setHeader('Content-Type', 'text/javascript');
+      res.end(require('fs').readFileSync(require('path').resolve(__dirname, './lib/cumbion-to-js__handle-numbers.mjs'), 'utf8'));
+      break;
     default:
       res.end('');
   }
