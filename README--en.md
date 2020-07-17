@@ -53,9 +53,8 @@ Wuki Wuki!
 Y dice! la cumbia
 ```
 
-<details>
-<summary>Javascript transpilation</summary>
-<pre>
+#### Javascript transpilation
+```
 let yo = function(licor, cerveza) {
   while(licor >= cerveza) {
     licor = licor - cerveza
@@ -83,8 +82,7 @@ while(cumbia != limite) {
   }
   console.log(cumbia)
 }
-</pre>
-</details>
+```
 
 ------
 
