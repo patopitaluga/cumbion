@@ -10,7 +10,7 @@ Dynamically typed Turing-complete programming language that's also cumbia lyrics
 
 ------
 
-Documentation: https://github.com/patopitaluga/cumbion/blob/master/DOCUMENTATION--en.md
+[Full documentation (spanish)](https://github.com/patopitaluga/cumbion/blob/master/DOCUMENTATION.md)
 
 ------
 

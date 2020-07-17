@@ -1,5 +1,0 @@
-# Cumbion
-
-## Documentation (english)
-
-Soon

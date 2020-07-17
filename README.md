@@ -21,13 +21,6 @@ Lenguaje de programación de tipado dinámico, Turing-completo, que es al mismo 
 ¡Y dice! "Hola mundo"
 ```
 
-<details>
-<summary>Transpilación a javascript</summary>
-<pre>
-console.log('Hola mundo');
-</pre>
-</details>
-
 ### FizzBuzz en Cumbion
 
 ```
