@@ -2,6 +2,8 @@
 
 Lenguaje de programación de de tipado dinámico, Turing-completo, que es al mismo tiempo letras de cumbia.
 
+**Probá el intérprete de javascript [en vivo](https://patopitaluga.github.io/cumbion/)**
+
 ## Documentación
 
 ### Formato de archivos
@@ -25,12 +27,12 @@ Se recomiendan nombres propios cumbiancheros.
 ```
 La cumbia es 20
 Laura es una diosa
-Poné cumbia más Laura en el baile
+El baile es cumbia más Laura
 ¡Y dice! Baile
 
 # define la variable "cumbia" y le asigna el valor 20
 # define la variable "laura" y le asigna el valor 35 considerando 3 y 5 por la cantidad de letras de "una" y "diosa"
-# define la variable "baile" y le asigna la suma de "laura y baile"
+# define la variable "baile" y le asigna la suma del número 6 y la variable Laura
 # imprime la variable "baile"
 ```
 
@@ -131,7 +133,7 @@ Si la cumbia es mayor que 5 y Laura es piola
 ```
 
 ### Loops while
-La palabra "mientras" comienza un loop while. Cierran al encontrar una línea en blanco, o al encontrar el comando "Wuki! Wuki!"
+La palabra "mientras" comienza un loop while. Cierran al encontrar una línea en blanco. Para detener la ejecución del resto del contenido de while para esa iteración del loop, utilizar el comando "Wuki! Wuki!", equivalente a "continue" en javascript y otros lenguajes.
 
 ```
 Mientras el baile sea tan alto como cinco
@@ -150,6 +152,8 @@ Y dice! Cumbia!
 ### Expresiones poéticas
 Equivalentes para mejorar la estética cumbiera:
 ```
-La yuta es nada
+La yuta no es nada
 ## equivale a: let yuta = 0;
 ```
+
+**Probá el intérprete de javascript [en vivo](https://patopitaluga.github.io/cumbion/)**
