@@ -1,6 +1,4 @@
-![Cumbion Logo](https://patopitaluga.github.io/cumbion/images/cumbion-icon.png)
-
-# Cumbion
+![Cumbion Logo](https://patopitaluga.github.io/cumbion/images/cumbion-gh-title.png)
 
 Dynamically typed Turing-complete programming language that's also cumbia lyrics.
 

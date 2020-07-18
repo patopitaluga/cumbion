@@ -1,6 +1,4 @@
-![Cumbion Logo](https://patopitaluga.github.io/cumbion/images/cumbion-icon.png)
-
-# Cumbion
+![Cumbion Logo](https://patopitaluga.github.io/cumbion/images/cumbion-gh-title.png)
 
 Lenguaje de programación de tipado dinámico, Turing-completo, que es al mismo tiempo letras de cumbia.
 
