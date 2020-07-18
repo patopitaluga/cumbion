@@ -1,4 +1,4 @@
-![Cumbion Logo](https://patopitaluga.github.io/cumbion/images/cumbion-icon.png | width=100)
+![Cumbion Logo](https://patopitaluga.github.io/cumbion/images/cumbion-icon.png)
 
 # Cumbion
 
