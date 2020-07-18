@@ -31,7 +31,10 @@ const decodeEntities = (() => {
 })();
 
 const output = (_str) => {
-  document.getElementById('output').innerHTML += _str + '\n';
+  if (typeof _str === 'object')
+    document.getElementById('output').innerHTML += JSON.stringify(_str) + '\n';
+  else
+    document.getElementById('output').innerHTML += _str + '\n';
 };
 
 document.getElementById('examples').onchange = (_ev) => {
@@ -44,7 +47,7 @@ El licor es el licor menos cerveza
 ¡Mandale licor!
 
 El límite es 100
-La cumbia no es nada
+Cumbia Gratis!
 El Tano es tres
 Laura es linda
 
@@ -72,8 +75,8 @@ La tres de las pibas es rocha
 La 4 de las pibas es re cheta
 Las pibas tienen 100
 
-La cumbia no es nada
-El mayor no es nada
+Cumbia Gratis!
+Mayor Gratis!
 Mientras la cumbia sea menor que las pibas
 Si la cumbia de las pibas es más grande que el mayor
 El mayor es la cumbia de las pibas

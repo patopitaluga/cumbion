@@ -81,7 +81,7 @@ while(cumbia != limite) {
             done(new Error(
               'Transpilation doesn\'t match expected js. ' +
               'Difference in line: ' + indexLineWithDifference + '. ' +
-              'Got: ' + lineWithDifference + '. Expected: ' + arExpected[indexLineWithDifference]
+              'Got: ' + lineWithDifference + '. Expected: ' + ((arExpected[indexLineWithDifference] === '') ? 'empty line' : arExpected[indexLineWithDifference])
             ));
         })
         .catch((_err) => {

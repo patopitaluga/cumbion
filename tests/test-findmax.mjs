@@ -1,3 +1,4 @@
+import { helpers } from '../lib/cumbion-to-js__helpers.mjs';
 import { cumbionToJs } from '../lib/cumbion-to-js.mjs';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -6,16 +7,6 @@ import * as path from 'path';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
-
-/**
- *
- */
-const trimRight = (_str) => {
-  while (_str.slice(-1) === ' ') {
-    _str = _str.substr(0, _str.length -1);
-  }
-  return _str;
-};
 
 const testFindmax = function() {
   describe('Test findmax transpilation', function() {
@@ -50,7 +41,7 @@ while(cumbia < pibas.length) {
   }
   cumbia++
 }
-console.log("El + grande de:")
+console.log("El más grande de:")
 console.log(pibas)
 console.log("Es: ")
 console.log(mayor)
@@ -60,7 +51,7 @@ console.log(mayor)
           let indexLineWithDifference = -1;
           let lineWithDifference = '';
           _result.trim().split('\n').forEach((_line, _index) => {
-            if (trimRight(_line) !== trimRight(arExpected[_index])) {
+            if (helpers.trimRight(_line) !== helpers.trimRight(arExpected[_index])) {
               allLinesEqual = false;
               if (indexLineWithDifference === -1) {
                 indexLineWithDifference = _index;

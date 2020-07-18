@@ -160,8 +160,8 @@ Y dice! Cumbia!
 ### Expresiones poéticas
 Equivalentes para mejorar la estética cumbiera:
 ```
-La yuta no es nada
-## equivale a: let yuta = 0;
+Damas Gratis!
+## equivale a: let damas = 0;
 ```
 
 **Probá el intérprete de javascript [en vivo](https://patopitaluga.github.io/cumbion/)**
