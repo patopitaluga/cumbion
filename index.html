@@ -8,9 +8,21 @@
   <meta name="theme-color" content="#fafafa"/>
 </head>
 <body>
-  <div class="container">
-    <div>
-      <h1>Cumbion programming language</h1>
+  <div class="container" style="padding-bottom: 10px;">
+    <div style="margin-bottom: 25px;display: flex;">
+      <div style="margin: auto 0;flex: 0 0 auto;">
+        <img
+          alt=""
+          src="./images/cumbion-icon.png"
+          class="logo"
+        />
+      </div>
+      <div style="display: flex;margin-left: 25px;margin-right: auto;">
+        <h1 class="title">
+          <span style="font-family: cursive;">Cumbion</span>
+          <span style="font-family: monospace;font-size: 0.9em;margin-left: 4px;">programming language</span>
+        </h1>
+      </div>
     </div>
     <div>
       <h2>Javascript transpiler</h2>
@@ -19,42 +31,55 @@
       <p>Dynamically typed Turing-complete programming language that's also cumbia lyrics.</p>
       <p>Source and documentation: <a href="https://github.com/patopitaluga/cumbion/" target="_blank">https://github.com/patopitaluga/cumbion/</a>.</p>
     </div>
-    <div style="display: flex; width: 100%;">
-      <button id="transpile-button" style="margin: auto 0 auto 0;">
-        Transpile
-      </button>
+  </div>
+  <div style="background: #1a2632; border-top: 1px #e1e4e8 solid; padding-top: 20px;">
+    <div class="container">
+      <div style="display: flex; width: 100%;flex-wrap: wrap;">
+        <button
+          id="transpile-button"
+          style="margin: 5px 0 10px;"
+        >
+          Transpile
+        </button>
 
-      <button id="run-button" style="margin: auto auto auto 10px;">
-        Run
-      </button>
+        <button
+          id="run-button"
+          style="margin: 5px auto 10px 10px;"
+        >
+          Run
+        </button>
 
-      <div style="margin: auto 0 auto auto;">
-        Load examples:
-        <select id="examples">
-          <option value="0"></button>
-          <option value="1">FizzBuzz</button>
-          <option value="2">Find max</button>
-        </select>
-      </div>
-    </div>
-    <div class="cols">
-      <div class="col1">
-        <label>
-          <span class="label-text">Cumbion code:</span>
-          <textarea id="cumbioncode"></textarea>
-        </label>
-      </div>
-
-      <div class="col1">
-        <div class="transpile">
-          <div id="output-title">
-            &nbsp;
-          </div>
-          <pre id="output">
-          </pre>
+        <div style="margin: 5px 0 10px auto;font-size: 15px;min-width: 180px; text-align: right;">
+          Examples:
+          <select id="examples">
+            <option value="0"></button>
+            <option value="1">FizzBuzz</button>
+            <option value="2">Find max</button>
+          </select>
         </div>
       </div>
+      <div class="cols">
+        <div class="col1">
+          <label>
+            <span class="label-text">Cumbion code:</span>
+            <textarea id="cumbioncode">Y dice! "Hola Mundo"</textarea>
+          </label>
+        </div>
 
+        <div class="col1">
+          <div class="transpile">
+            <div id="output-title">
+              Output:
+            </div>
+            <pre
+              id="output"
+              style="background: #222; color: #eee;font-size: 14px;"
+            >
+            </pre>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 

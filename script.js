@@ -46,7 +46,7 @@ El licor es el licor menos cerveza
 El límite es 100
 La cumbia no es nada
 El Tano es tres
-Laura es la más linda
+Laura es linda
 
 Mientras que la cumbia no sea el límite
 Sube la cumbia
@@ -98,11 +98,16 @@ document.getElementById('run-button').onclick = () => {
   }*/
 
   document.getElementById('output-title').innerHTML = 'Output:';
-  let theScriptStr = decodeEntities(document.getElementById('output').innerHTML);
   document.getElementById('output').innerHTML = '';
-  theScriptStr = theScriptStr.replace(RegExp('console.log', 'g'), 'output');
 
-  eval(theScriptStr);
+  cumbionToJs(document.getElementById('cumbioncode').value)
+    .then((_result) => {
+      _result = _result.replace(RegExp('console.log', 'g'), 'output');
+      eval(_result);
+    })
+    .catch((_err) => {
+      output(_err);
+    })
 
   // const scriptElement = document.createElement('script');
   // scriptElement.innerHTML = theScriptStr;

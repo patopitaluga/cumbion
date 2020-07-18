@@ -42,13 +42,13 @@ Si la variable es definida fuera de una función se encontrará en el scope glob
 
 ### Tipos de variables
 
-- Misterioso/misteriosa - variables no definidas o definidas y regresadas a estado undefined. Por ejemplo **Laura es misteriosa**
-- Nada - tipo null, se expresa con la palabra **nada**
-- Booleano - valores verdaderos o falsos: **piola** = verdadero | **ortiba** = falso. Por ejemplo **Laura es piola** equivale a laura = true.
-- Número - Enteros (por ahora), se expresan con el número literal, por ejemplo **12**, con palabras, según la cantidad de letras, por ejemplo **linda** equivale a 5, o el nombre del número para los números del 0 al 9, por ejemplo: **seis**
-- String - Expresados entre comillas dobles, por ejemplo "Cu cu cu cumbia!". Se concatenan con la palabra "más". Ejemplo: **Y dice! Cumbia más " cabeza"** concatena el valor de la variable **cumbia** y el string "cabeza"
-- Arrays - Siempre precesidos por artículo plural. Se definirán automáticamente la primera vez que se añada un elemento con la palabra "tienen", por ejemplo **Los pibes tienen ganas de bailar** define el array pibes si no existe y le asigna el valor 526 por la cantidad de letras.
-- Funciones - Se definen con la palabra "tomo" o "toma" luego del nombre de la variable, por ejemplo **Laura toma cerveza** define la función **laura** con un único parámetro que se llama **cerveza** // laura = (cerveza) => ... en javascript
+- **Misterioso/misteriosa/misteriose**: variables no definidas o definidas y regresadas a estado undefined. Por ejemplo **Laura es misteriosa**
+- **Nada**: tipo null, se expresa con la palabra **nada**
+- **Booleano**: valores verdaderos o falsos: **piola** = verdadero | **ortiba** = falso. Por ejemplo **Laura es piola** equivale a laura = true.
+- **Número**: Se expresan con el número literal, por ejemplo **12**, o con palabras por la cantidad de letras, por ejemplo **linda** equivale a 5, o el nombre del número para los números del 0 al 9, por ejemplo: **seis**
+- **String**: Expresados entre comillas dobles, por ejemplo "Cu cu cu cumbia!". Se concatenan con la palabra "más". Ejemplo: **Y dice! Cumbia más " cabeza"** concatena el valor de la variable **cumbia** y el string "cabeza"
+- **Arrays**: - Siempre precesidos por artículo plural. Se definirán automáticamente la primera vez que se añada un elemento con la palabra "tienen", por ejemplo **Los pibes tienen ganas de bailar** define el array pibes si no existe y le asigna el valor 526 por la cantidad de letras.
+- **Funciones**: Se definen con la palabra "tomo" o "toma" luego del nombre de la variable, por ejemplo **Laura toma cerveza** define la función **laura** con un único parámetro que se llama **cerveza** // laura = (cerveza) => ... en javascript
 
 ### Arrays
 
@@ -105,10 +105,10 @@ Y vas para abajo, Nena
 ### Operadores
 Los operadores matemáticos básicos se expresan literalmente o mediante aliases.
 
-- + suma. Alias: "más"
-- - resta. Alias: "menos"
-- * multiplicación. Alias: "por"
-- / división. Alias: "entre"
+- \+ suma. Alias: "más"
+- \- resta. Alias: "menos"
+- \* multiplicación. Alias: "por"
+- \/ división. Alias: "entre"
 
 Ejemplo:
 ```
@@ -132,7 +132,7 @@ Si la cumbia es mayor que 5 y Laura es piola
 # equivale a: if (cumbia > 5 && laura == true) {}
 ```
 
-### Loops while
+### Loops/Until while
 La palabra "mientras" comienza un loop while. Cierran al encontrar una línea en blanco. Para detener la ejecución del resto del contenido de while para esa iteración del loop, utilizar el comando "Wuki! Wuki!", equivalente a "continue" en javascript y otros lenguajes.
 
 ```
@@ -140,6 +140,14 @@ Mientras el baile sea tan alto como cinco
 Sube el baile!
 
 # Equivale a: while (baile >= 5) { baile++ }
+```
+
+### Funciones
+Luego del nombre de la variable, las palabras "tomo" o "toma" se declara el nombre del parámetro. Si se repite la declaración de la misma función con otro parámetro en la línea inmediatamente siguiente, se agrega únicamente el parámetro en vez de declararse nuevamente. Ejemplo:
+```
+El volumen toma el ancho
+El volumen toma el largo
+# equivale a: let volumen = function(ancho, largo) {
 ```
 
 ### Salida

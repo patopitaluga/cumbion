@@ -1,3 +1,5 @@
+![Cumbion Logo](https://patopitaluga.github.io/cumbion/cumbion-icon.png | width=100)
+
 # Cumbion
 
 Lenguaje de programación de tipado dinámico, Turing-completo, que es al mismo tiempo letras de cumbia.
@@ -34,7 +36,7 @@ El licor es el licor menos cerveza
 El límite es 100
 La cumbia no es nada
 El Tano es tres
-Laura es la más linda
+Laura es linda
 
 Mientras que la cumbia no sea el límite
 Sube la cumbia

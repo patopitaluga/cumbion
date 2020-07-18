@@ -1,0 +1,26 @@
+{
+  "name": "cumbion",
+  "version": "1.0.0",
+  "description": "Lenguaje de programación de tipado dinámico, Turing-completo, que es al mismo tiempo letras de cumbia.",
+  "main": "cumbion.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "node --experimental-modules --no-warnings ./node_modules/mocha/bin/mocha tests/test.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patopitaluga/cumbion.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patopitaluga/cumbion/issues"
+  },
+  "homepage": "https://github.com/patopitaluga/cumbion#readme",
+  "devDependencies": {
+    "mocha": "^8.0.1"
+  }
+}
