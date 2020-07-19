@@ -31,6 +31,8 @@ const decodeEntities = (() => {
 })();
 
 const output = (_str) => {
+  document.getElementById('output').innerHTML += _str + '\n';
+  return
   if (typeof _str === 'object')
     document.getElementById('output').innerHTML += JSON.stringify(_str) + '\n';
   else
