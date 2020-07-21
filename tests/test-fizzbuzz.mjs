@@ -11,6 +11,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
  *
  */
 const trimRight = (_str) => {
+  if (!_str) return;
+
   while (_str.slice(-1) === ' ') {
     _str = _str.substr(0, _str.length -1);
   }
