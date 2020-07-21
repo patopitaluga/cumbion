@@ -6,6 +6,7 @@ const path = require('path');
 const http = require('http');
 
 http.createServer((req, res) => {
+  if (req.url.indexOf('?') > -1) req.url = req.url.substr(0, req.url.indexOf('?'));
   switch (req.url) {
   case '/':
     res.end(fs.readFileSync(path.resolve(__dirname, './index.html'), 'utf8'));
