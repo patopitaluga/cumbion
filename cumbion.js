@@ -2,11 +2,11 @@
 const { spawnSync } = require('child_process');
 const { resolve } = require('path');
 
-let arguments = '';
+let argumentsStr = '';
 for (let i = 2; i < process.argv.length; i++) {
-  arguments += ' ' + process.argv[i];
+  argumentsStr += ' ' + process.argv[i];
 }
 
-let cmd = 'node --experimental-modules --no-warnings ' + resolve(__dirname, 'cumbion-cli.mjs' + arguments);
-cmd = cmd.replace(RegExp('"', 'g'), '\\"')
+let cmd = 'node --experimental-modules --no-warnings ' + resolve(__dirname, 'cumbion-cli.mjs' + argumentsStr);
+cmd = cmd.replace(RegExp('"', 'g'), '\\"');
 spawnSync(cmd, { stdio: 'inherit', shell: true });

@@ -8,14 +8,23 @@ document.getElementById('transpile-button').onclick = () => {
     })
     .catch((_err) => {
       console.log(_err);
-    })
-}
+    });
+};
 
-const decodeEntities = (() => {
+/**
+ *
+ */
+/* const decodeEntities = (() => {
   // this prevents any overhead from creating the object each time
   var element = document.createElement('div');
 
-  function decodeHTMLEntities(str) {
+  /**
+   * Decore html entities.
+   *
+   * @param {string} str -
+   * @return {string}
+   */
+/* function decodeHTMLEntities(str) {
     if (str && typeof str === 'string') {
       // strip script/html tags
       str = str.replace(/<script[^>]*>([\S\s]*?)<\/script>/gmi, '');
@@ -28,11 +37,11 @@ const decodeEntities = (() => {
   }
 
   return decodeHTMLEntities;
-})();
+})(); */
 
 const output = (_str) => {
   document.getElementById('output').innerHTML += _str + '\n';
-  return
+  return;
   if (typeof _str === 'object')
     document.getElementById('output').innerHTML += JSON.stringify(_str) + '\n';
   else
@@ -68,7 +77,7 @@ Y dice! "Buzz!"
 Wuki Wuki!
 
 Y dice! la cumbia
-`
+`;
   if (Number(document.getElementById('examples').value) === 2)
     document.getElementById('cumbioncode').innerHTML = `Las pibas tienen cha cha
 Las pibas tienen ganas de bailar
@@ -112,9 +121,9 @@ document.getElementById('run-button').onclick = () => {
     })
     .catch((_err) => {
       output(_err);
-    })
+    });
 
   // const scriptElement = document.createElement('script');
   // scriptElement.innerHTML = theScriptStr;
   // document.getElementsByTagName('body')[0].appendChild(scriptElement)
-}
+};
