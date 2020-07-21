@@ -13,7 +13,7 @@
 // const fs = require('fs');
 import * as fs from 'fs';
 // const path = require('path');
-import * as path from 'path';
+// import * as path from 'path';
 
 import { cumbionToJs } from './lib/cumbion-to-js.mjs';
 
@@ -32,7 +32,6 @@ if (process.argv[2] === 'line') {
       console.log(_err);
     });
 } else {
-
   let filename;
   if (!process.argv[2]) { console.log('Missing filename parameter. Run: "node cumbion yourscript.cumbia"'); process.exit(); }
   if (process.argv[2] === 'run') {
@@ -43,22 +42,22 @@ if (process.argv[2] === 'line') {
   }
 
   try {
-    const doesThisFileExists = fs.readFileSync(filename);
-  } catch(err) {
+    fs.readFileSync(filename);
+  } catch (err) {
     console.log('File "' + filename + '" not found.');
     process.exit();
   }
 
   const decodeEntities = (encodedString) => {
-    var translate_re = /&(nbsp|amp|quot|lt|gt);/g;
+    var translateRe = /&(nbsp|amp|quot|lt|gt);/g;
     var translate = {
       'nbsp': ' ',
-      'amp' : '&',
+      'amp': '&',
       'quot': '"',
-      'lt'  : '<',
-      'gt'  : '>',
+      'lt': '<',
+      'gt': '>',
     };
-    return encodedString.replace(translate_re, function(match, entity) {
+    return encodedString.replace(translateRe, function(match, entity) {
       return translate[entity];
     }).replace(/&#(\d+);/gi, function(match, numStr) {
       var num = parseInt(numStr, 10);
@@ -70,17 +69,17 @@ if (process.argv[2] === 'line') {
   cumbionToJs(fileContents)
     .then((_result) => {
       if (process.argv[2] === 'run') {
-        _result = _result.replace(RegExp('\&', 'g'), '&amp;');
+        _result = _result.replace(RegExp('&', 'g'), '&amp;');
 
         // console.log(decodeEntities(_result))
 
         try {
           eval(decodeEntities(_result));
-        } catch(err) {
+        } catch (err) {
           console.log(err);
         }
 
-        /*const lines = _result.split('\n');
+        /* const lines = _result.split('\n');
         lines.forEach((_line, _lineIndex) => {
           try {
             eval(_line);
@@ -92,7 +91,7 @@ if (process.argv[2] === 'line') {
         if (process.argv[3]) {
           if (process.argv[3].slice(-3) !== '.js') throw new Error(process.argv[3] + ' is not a proper output js file. Try "node cumbion yourscript.cumbia someoutputname.js"');
           fs.writeFileSync(process.argv[3], _result);
-          console.log('Output js file generated: ' + process.argv[3])
+          console.log('Output js file generated: ' + process.argv[3]);
         } else {
           console.log('');
           console.log(_result);

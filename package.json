@@ -7,6 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
+    "eslint": "eslint *.js lib/*.mjs || true",
     "test": "node --experimental-modules --no-warnings ./node_modules/mocha/bin/mocha tests/test.mjs"
   },
   "repository": {
@@ -21,6 +22,8 @@
   },
   "homepage": "https://github.com/patopitaluga/cumbion#readme",
   "devDependencies": {
+    "eslint": "^7.5.0",
+    "eslint-config-google": "^0.14.0",
     "mocha": "^8.0.1"
   }
 }
