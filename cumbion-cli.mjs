@@ -9,6 +9,9 @@
  *
  * To export the js code to a file:
  *   node cumbion yourscript.cumbia thetargetfile.js
+ *
+ * To transpile a single line: node cumbion line + the cumbion snippet.
+ *   node cumbion line Y dice! Cumbia más " cabeza"
  */
 // const fs = require('fs');
 import * as fs from 'fs';
@@ -16,6 +19,7 @@ import * as fs from 'fs';
 // import * as path from 'path';
 
 import { cumbionToJs } from './lib/cumbion-to-js.mjs';
+import { helpers } from './lib/cumbion-to-js__helpers.mjs';
 
 if (process.argv[2] === 'line') {
   let line = '';
@@ -48,45 +52,17 @@ if (process.argv[2] === 'line') {
     process.exit();
   }
 
-  const decodeEntities = (encodedString) => {
-    var translateRe = /&(nbsp|amp|quot|lt|gt);/g;
-    var translate = {
-      'nbsp': ' ',
-      'amp': '&',
-      'quot': '"',
-      'lt': '<',
-      'gt': '>',
-    };
-    return encodedString.replace(translateRe, function(match, entity) {
-      return translate[entity];
-    }).replace(/&#(\d+);/gi, function(match, numStr) {
-      var num = parseInt(numStr, 10);
-      return String.fromCharCode(num);
-    });
-  };
-
   const fileContents = fs.readFileSync(filename, 'utf8');
   cumbionToJs(fileContents)
     .then((_result) => {
       if (process.argv[2] === 'run') {
         _result = _result.replace(RegExp('&', 'g'), '&amp;');
 
-        // console.log(decodeEntities(_result))
-
         try {
-          eval(decodeEntities(_result));
+          eval(helpers.decodeEntities(_result));
         } catch (err) {
           console.log(err);
         }
-
-        /* const lines = _result.split('\n');
-        lines.forEach((_line, _lineIndex) => {
-          try {
-            eval(_line);
-          } catch(err) {
-            console.log('Error in line ' + _lineIndex + ': ' + _line);
-          }
-        });*/
       } else {
         if (process.argv[3]) {
           if (process.argv[3].slice(-3) !== '.js') throw new Error(process.argv[3] + ' is not a proper output js file. Try "node cumbion yourscript.cumbia someoutputname.js"');
