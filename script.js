@@ -26,7 +26,7 @@ document.getElementById('transpile-button').onclick = () => {
   document.getElementById('output-title').innerHTML = 'Javascript transpilation:';
   cumbionToJs(document.getElementById('cumbioncode').value)
     .then((_result) => {
-      document.getElementById('output').innerHTML = _result;
+      document.getElementById('output').innerHTML = _result.trim() + '\n';
     })
     .catch((_err) => {
       console.log(_err);
@@ -40,8 +40,8 @@ const output = (_str) => {
     document.getElementById('output').innerHTML += _str + '\n';
 };
 
-const example1 = `
-# Prints the numbers from 1 to 100. But for multiples of three print
+const example1 =
+`# Prints the numbers from 1 to 100. But for multiples of three print
 # “Fizz” instead of the number and for the multiples of five print
 # “Buzz”. For numbers which are multiples of both three and five print
 # “FizzBuzz”.
